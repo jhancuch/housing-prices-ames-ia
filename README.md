@@ -28,4 +28,6 @@ The table above provides a good overview of the development of each model. Overa
 
 The table shows the cross validation of the test set, the validation set, and then the final test set results. While the Polynomial, Indicator, and Piecewise Polynomial models all displayed similar R^2 cross-validation values, and validation set RMSEs, the Piecewise Polynomial has roughly .14 better RMSEs than the other two. While it does have .001 higher RMSE in the validation set, I doubt this small of a value difference is indicating substantially less overfit. Instead, potentially the flexability of the spline at the knot with the piecewise polynomial allowed it to have a smoother fit to the data, allowing better predictions in the test set compared to the Indicator function or the Polynomials. 
 
+The table also demonstrates that while the linear model with no non-linear components had a lower cross validation score and the lowest validation set RMSE, it was significantly better than the models with non-linear components. A driving reason is likely that the non-linearity found within the dataset revolved around the target feature, SalePrice. By taking the natural log of SalePrice, I transformed the variable into a normally distributed variable and remove some of the non-linearity inherent in the variable.
+
 ### Discussion
