@@ -11,8 +11,8 @@ I end up generating four models. The first model is a linear model with no non-l
 | Metric | Linear Model | Linear Model (Polynomials) | Linear Model (Indicator Function) | Linear Model (Piecewise Polynomials) |
 |---     | ---          | ---                        |---                                |---                                   |
 | Cross Validation R^2 Mean | 0.801 | 0.877 | 0.875 | 0.878 |
-| Cross Validation R^2 Standard Deviation | 0.024 | 0.022 | 0.023 |
-| Validation Set RMSE | 0.027 | 0.060 | 0.056 | 0.056 | 0.057 |
+| Cross Validation R^2 Standard Deviation | 0.027 | 0.024 | 0.022 | 0.023 |
+| Validation Set RMSE | 0.060 | 0.056 | 0.056 | 0.057 |
 | Test Set RMSE | 0.18526 | 0.35116 | 0.34753 | 0.21672 |
 
 
