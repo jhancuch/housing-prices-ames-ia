@@ -15,6 +15,10 @@ I end up generating four models. The first model is a linear model with no non-l
 | Validation Set RMSE | 0.060 | 0.056 | 0.056 | 0.057 |
 | Test Set RMSE | 0.18526 | 0.35116 | 0.34753 | 0.21672 |
 
+The table above provides a good overview of the development of each model. Overall, we can see that we likely overfit our non-linear components leading to poor predictions compared to just the linear model with no non-linear components. 
+
+The table shows the cross validation of the test set, the validation set, and then the final test set results. While the Polynomial, Indicator, and Piecewise Polynomial models all displayed similar R^2 cross-validation values, and validation set RMSEs, the Piecewise Polynomial has roughly .14 better RMSEs than the other two. While it does have .001 higher RMSE in the validation set, I doubt this small of a value difference is indicating substantially less overfit. Instead, potentially the flexability of the spline at the knot with the piecewise polynomial allowed it to have a smoother fit to the data, allowing better predictions in the test set compared to the Indicator function or the Polynomials. 
+
 
 
 ### Results and Evaluation
