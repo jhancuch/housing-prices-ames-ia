@@ -8,6 +8,15 @@ In this modeling exercise, we use both the natural log transformation of the tar
 
 I end up generating four models. The first model is a linear model with no non-linear components. Instead, I take the natural log of the target variable, SalePrice, to deal with the non-linearity. The other three models I develop use non-linear components to deal with the non-linearity between the target variable and specific independent variables. I use an indicator function in one model, polynomials in another, and piecewise polynomials in a third. 
 
+In generating the models, I would first drop any insignificant independent variables. I then would focus on dropping observations that had a leverage statistic above (2k+2)/n and determined to be an outlier by having a studentized residual value of above three. I additionally plotted these statistics along with Cook's Distance measure to measure the influence of observations. I lastly would then check for colinearity using VIF. 
+
+Once I was satisfied with the model development, I would check the model didn't violate the following three asumptions:
+* Linear response-predictor relationship
+* Non-correlated error terms
+* Homoskedastic error terms
+
+### Results and Evaluation
+
 | Metric | Linear Model | Linear Model (Polynomials) | Linear Model (Indicator Function) | Linear Model (Piecewise Polynomials) |
 |---     | ---          | ---                        |---                                |---                                   |
 | Cross Validation R^2 Mean | 0.801 | 0.877 | 0.875 | 0.878 |
@@ -18,9 +27,5 @@ I end up generating four models. The first model is a linear model with no non-l
 The table above provides a good overview of the development of each model. Overall, we can see that we likely overfit our non-linear components leading to poor predictions compared to just the linear model with no non-linear components. 
 
 The table shows the cross validation of the test set, the validation set, and then the final test set results. While the Polynomial, Indicator, and Piecewise Polynomial models all displayed similar R^2 cross-validation values, and validation set RMSEs, the Piecewise Polynomial has roughly .14 better RMSEs than the other two. While it does have .001 higher RMSE in the validation set, I doubt this small of a value difference is indicating substantially less overfit. Instead, potentially the flexability of the spline at the knot with the piecewise polynomial allowed it to have a smoother fit to the data, allowing better predictions in the test set compared to the Indicator function or the Polynomials. 
-
-
-
-### Results and Evaluation
 
 ### Discussion
