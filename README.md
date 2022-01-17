@@ -1,5 +1,7 @@
 # housing-prices-ames-ia
-The research question of interest is to accurately predict a house's sale price in Ames, IA based upon 79 possible features. The resulting model can be used by buyers, sellers, and realtors to obtain an estimate (with a confidence interval) of what a house is worth. 
+The research question of interest is to accurately predict a house's sale price in Ames, IA based upon 79 possible features. The resulting model can be used by buyers, sellers, and realtors to obtain an estimate (with a confidence interval) of what a house is worth.
+
+The code can be run interactively through a [Google Colab Notebook](https://colab.research.google.com/github/jhancuch/housing-prices-ames-ia/blob/main/housing-price-prediction.ipynb).
 
 ### Research Design and Modeling Methods
 The research design is to use a base linear model utilizing ordinary least squares trained on a training set, validated, and then predict the sale price on a test set. With the linear model, there are transformations and non-linear components that can be used to shift the model from a purely linear model to a model that allows for non-linearity. 
