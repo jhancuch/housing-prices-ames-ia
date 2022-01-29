@@ -1,0 +1,17 @@
+pytest
+pylint
+jupyter
+pytest-cov
+copy
+os
+patsy
+numpy
+math
+scipy
+seaborn
+missingno
+matplotlib
+sklearn
+statsmodels.api
+pandas
+nbval
